@@ -1,8 +1,12 @@
 package amanda.entidades;
 
+import java.util.Date;
+
 public class Postagem {
 	private Long id;
 	private String conteudo;
+	private String titulo;
+	private Date dataCriacao;
 	
 	public Postagem() {}
 	
@@ -21,6 +25,22 @@ public class Postagem {
 	}
 	public void setConteudo(String conteudo) {
 		this.conteudo = conteudo;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public Date getDataCriacao() {
+		return dataCriacao;
+	}
+
+	public void setDataCriacao(Date dataCriacao) {
+		this.dataCriacao = dataCriacao;
 	}
 	
 	
