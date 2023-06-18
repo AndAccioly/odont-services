@@ -13,6 +13,8 @@ public class Postagem {
 	public Postagem(Long id, String conteudo) {
 		this.id = id;
 		this.conteudo = conteudo;
+		this.titulo = "Titulo " + id;
+		this.dataCriacao = new Date();
 	}
 	public Long getId() {
 		return id;

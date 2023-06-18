@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import amanda.entidades.Cliente;
 import amanda.entidades.Postagem;
 
 @RestController
@@ -20,5 +21,10 @@ public class PostagemController {
 	@RequestMapping("/")
 	public Postagem greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return new Postagem(counter.incrementAndGet(), String.format(template, name));
+	}
+	
+	@RequestMapping("")
+	public Cliente clientePorId(@RequestParam(value = "cpf") String cpf) {
+		return new Cliente(counter.incrementAndGet(), cpf, "João Testador");
 	}
 }
